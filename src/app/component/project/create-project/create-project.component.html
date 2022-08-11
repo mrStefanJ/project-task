@@ -1,0 +1,21 @@
+<div id="dialog__container">
+    <h2 class="dialog__title">Add new Project</h2>
+    <form class="dialog__form" [formGroup]="projectForm" (ngSubmit)="createProject()">
+        <input type="text" placeholder="Project name" class="form-control" formControlName="name" />
+        <div *ngIf="projectForm.controls['name'].touched || submitted" class="error-message">
+            <div *ngIf="projectForm.controls['name'].errors?.['required']">
+                Project name is required
+            </div>
+        </div>
+        <input type="date" formControlName="date"/>
+        <div *ngIf="projectForm.controls['date'].touched || submitted" class="error-message">
+            <div *ngIf="projectForm.controls['date'].errors?.['required']">
+                Date is required
+            </div>
+        </div>
+        <div class="action">
+            <button type="submit" class="btn btn--success">Add</button>
+            <button class="btn btn--close" (click)="project.showDialog = false">Cancel</button>
+        </div>
+    </form>
+</div>
