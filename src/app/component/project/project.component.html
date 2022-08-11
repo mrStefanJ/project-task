@@ -1,0 +1,14 @@
+<app-create-project *ngIf="project.showDialog"></app-create-project>
+<div class="action">
+    <button class="btn btnAdd" (click)="project.showDialog = true">+</button>
+</div>
+<div class="project__list">
+    <ul *ngIf="allProject$ | async as projects">
+        <li class="project--item" *ngFor="let p of projects">
+            <a [routerLink]="['/project',p.id,'details']" class="project__link">
+                <p class="project__name">{{ p.name }}</p>
+                <p class="project__date">{{ p.date | date:'dd-MM-YYYY' }}</p>
+            </a>
+        </li>
+    </ul>
+</div>

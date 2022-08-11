@@ -1,0 +1,35 @@
+.action{
+    text-align: right;
+    .btn{
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(5, 212, 5);
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.project__list{
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .project--item{
+            width: 150px;
+            margin: 5px 20px;
+            border: 1px solid black;
+            border-radius: 20px;
+            &:hover{
+                box-shadow: 5px 5px 4px rgb(37, 37, 37, 0.5);
+            }
+
+            .project__link{
+                text-align: center;
+                .project__name{}
+                .project__date{}
+            }
+        }
+    }
+}
