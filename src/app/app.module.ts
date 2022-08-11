@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectComponent } from './component/project/project.component';
-import { TaskComponent } from './component/task/task.component';
 import { CreateProjectComponent } from './component/project/create-project/create-project.component';
 import { DetailProjectComponent } from './component/project/detail-project/detail-project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     ProjectComponent,
-    TaskComponent,
     CreateProjectComponent,
     DetailProjectComponent
   ],
