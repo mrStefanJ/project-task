@@ -36,18 +36,15 @@ export class DetailProjectComponent implements OnInit {
       this.task = this.project.getAllTasks()
     ]).subscribe({
       next: res => {
-        console.log(res);
         if(res[0].taskList.length > 0){
           this.newTaskList = res[1].filter((task) => 
           res[0].taskList.includes(task.id)
         );
         } else{
-          this.message = 'Ther are no tasks'
+          this.message = 'There are no tasks'
         }
-        
-        console.log(this.newTaskList);
-      }, error: () => {
-        
+      }, error: (err) => {
+        console.log('Error', err);
       }
     });
   }
