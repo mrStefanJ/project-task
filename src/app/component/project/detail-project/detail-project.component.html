@@ -1,0 +1,18 @@
+<button (click)="goBack()" class="btn btn__back">Go Back</button>
+<div class="task">
+    <ul *ngIf="newTaskList as tasks;">
+        <li *ngFor="let task of tasks;" class="task__detail">
+            <div class="header">
+                <p>{{task.taskName}}</p>
+                <p>{{task.estimate}}</p>
+            </div>
+            <div class="context">
+                <p>{{task.taskDescription}}</p>
+                <p>{{task.date}}</p>
+            </div>
+        </li>
+    </ul>
+    <div *ngIf="newTaskList == 0" class="message">
+        <p class="message__text">{{message}}</p>
+    </div>
+</div>
