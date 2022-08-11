@@ -26,7 +26,6 @@ export class CreateProjectComponent implements OnInit {
     this.submitted = true;
     if(this.projectForm.valid){
       this.project.createProject(this.projectForm.value).subscribe((res) => {
-        console.log(res);
         this.project.showDialog = false;
       })
     }
